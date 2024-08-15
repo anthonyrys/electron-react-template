@@ -11,12 +11,8 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
-    "@mui/material": "^5.16.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hot-loader": "^4.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sass": "^1.77.8",
     "sass-loader": "^14.2.1"
   },
@@ -66,11 +62,11 @@
               "config": "./webpack/renderer.webpack.js",
               "entryPoints": [
                 {
-                  "html": "./public/index.html",
-                  "js": "./src/index.tsx",
-                  "name": "main_window",
+                  "html": "./src/renderer/static/app.html",
+                  "js": "./src/renderer/app.tsx",
+                  "name": "app_window",
                   "preload": {
-                    "js": "./electron/bridge.ts"
+                    "js": "./src/main/bridge.ts"
                   }
                 }
               ]
